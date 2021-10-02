@@ -87,6 +87,261 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/**------------------ General -------------------**/   
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 360px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #e2e3ed;
+  background: #202322;
+}
+
+header, main, footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.wrapper {
+  width: 88%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  
+}
+
+/**------------------ Header -------------------**/ 
+
+header img {
+  width: 70%;
+  padding: 15px 0 10px 0;
+}
+
+header .divide-line {
+  width: 100%;
+  height: 1px;
+  background-color: #3a3a3a;
+}
+
+header nav {
+  width: 50%;
+  padding: 20px 0;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul li a {
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+  color: #e2e3ed;
+}
+
+/**------------------ Hero area -------------------**/ 
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.25em;
+  font-weight: 500;
+}
+
+.hero {
+  height: 500px;
+  background: url('../img/hero.jpg') center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/**------------------ Form -------------------**/
+
+.form {
+  display: flex;
+  justify-content: center;
+  background: #527158;
+}
+
+.form h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+}
+
+.form p {
+  font-size: 0.875em;
+  font-weight: 400;
+}
+
+input[type=text] {
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+  box-sizing: border-box; 
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin: 20px 0 50px 0;
+  background-color: #2a423a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+}
+
+
+
+/**------------------ Features -------------------**/
+
+.feature .wrapper {
+  margin-bottom: 30px;
+}
+
+.feature {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  background: url('../img/features.png') center;
+  background-size: cover;
+}
+
+.feature h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+}
+
+.feature-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.feature-description {
+  font-size: 0.875em;
+  margin: 30px 0;
+}
+
+.feature-icon {
+  font-size: 3.75em;
+  margin: 0;
+}
+
+.feature-icon, .feature-description {
+  width: 63%;
+  text-align: center;
+}
+
+/**------------------ Review -------------------**/
+
+.review {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  background: #2a423a;
+}
+
+.review img {
+  width: 100%;
+}
+
+.review h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.875em;
+  font-weight: 500;
+}
+
+.review h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  text-align: left;
+}
+
+.review-text {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+}
+
+.review-text p {
+  font-size: 0.875em;
+  line-height: 1.285;
+  margin: 0;
+  padding: 0 0 45px 0;
+}
+
+/**------------------ Footer -------------------**/
+
+.contact, .social, .copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.contact h3, .contact address, .contact p, .social h3 {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+
+.contact a, .contact p {
+  font-style: normal;
+  text-decoration: none;
+  color: #e2e3ed;
+}
+
+footer h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125em;
+  font-weight: 500;
+  padding: 45px 0 10px 0;
+}
+
+.social-icons {
+  width: 62.5%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.125em;
+  margin-bottom: 35px;
+}
+
+.social-icons i {
+  background-color: #527158;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.copyright {
+  font-size: 0.875em;
+}
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
