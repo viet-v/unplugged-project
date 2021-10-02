@@ -93,7 +93,6 @@ html {
 }
 
 body {
-  width: 360px;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   font-weight: 400;
@@ -159,6 +158,7 @@ h1 {
 }
 
 .hero {
+  width: 100%;
   height: 500px;
   background: url('../img/hero.jpg') center;
   background-size: cover;
@@ -185,6 +185,7 @@ h1 {
   font-size: 0.875em;
   font-weight: 400;
 }
+
 
 input[type=text] {
   width: 100%;
@@ -430,9 +431,140 @@ footer h3 {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+
+  .wrapper {           /* Content wrapper changed a bit smaller on tablet */                 
+    width: 83%;
+  }
+
+  /*-------------------- Header tablet--------------------*/
+  header .wrapper {                
+    justify-content: space-between;         /* Logo and navigation are now on the same line */
+  }
+  
+  header img {
+    width: 35%;
+  }
+
+  .divide-line {
+    display: none;
+  }
+
+  header nav {
+    width: 20%;
+    padding: 35px 0;
+  }
+
+  header nav ul li a {
+    font-size: 1em;
+  }
+
+  /*-------------------- Hero tablet --------------------*/
+
+  h1 {
+    font-size: 3em;
+  }
+
+  /*-------------------- Form tablet --------------------*/
+
+  .form .wrapper {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .form-description {
+    width: 40%;
+  }
+
+  .form-input {
+    width: 45%;
+  }
+
+  .form h3 {
+    font-size: 1.5em;
+    margin: 35px 0;
+  }
+
+  /*-------------------- Features tablet --------------------*/
+
+  .feature-list {
+    width: 82%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  .feature-item {
+    width: 50%;
+  }
+
+  .feature h2 {
+    font-size: 2.25em;
+  }
+
+  /*-------------------- Review tablet --------------------*/
+  
+  .review .wrapper {
+    margin: 0 0 100px 0;
+  }
+
+  .review-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .review-img, .review-text {
+    width: 48%;
+  }
+
+  .review h2 {
+    font-size: 2.25em;
+    width: 100%;
+    text-align: left;
+    margin: 100px 0 15px 0;
+  }
+
+  .review h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+  }
+
+  /*-------------------- Footer tablet --------------------*/
+
+  footer .contact, footer .social {
+    width: 32%;
+  }
+
+  footer .wrapper {
+    justify-content: space-around;
+    margin: 90px 0;
+  }
+
+  footer h3, footer p {
+    padding: 0;
+    margin: 0;
+  }
+
+  footer h3 {
+    font-size: 1.5em;
+    padding-bottom: 30px;
+  }
+
+  .social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .copyright {
+    margin: 10px 0;
+  }
+
 }
+
+
+
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
