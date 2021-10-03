@@ -100,8 +100,7 @@ body {
   background: #202322;
 }
 
-header, main, footer {
-  width: 100%;
+header, footer {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -143,6 +142,7 @@ header nav ul {
 }
 
 header nav ul li a {
+  font-size: 1.125em;
   font-style: normal;
   font-weight: 700;
   text-decoration: none;
@@ -190,9 +190,9 @@ h1 {
 
 input[type=text] {          /* email input box */
   width: 100%;
-  color: #2a423a;
+  color: #9d9ea4;
   font-style: italic;
-  padding: 1em;
+  padding: 0.875em;
   box-sizing: border-box; 
 }
 
@@ -342,6 +342,69 @@ footer h3 {
 .copyright {
   font-size: 0.875em;
 }
+
+
+/*-----------------------------------------------------
+                    About page 
+  -----------------------------------------------------*/
+
+  /*-------------- Mission mobile -------------------*/
+  .mission {
+    display: flex;
+    justify-content: center;
+    background-color: #527158;
+  }
+
+  .mission .wrapper {
+    margin: 20px 0;
+  }
+
+  .mission h2,
+  .general-contact h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.875em;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .mission p,
+  .general-contact p {
+    font-size: 0.875em;
+  }
+
+  /*-------------- Map mobile -------------------*/
+  .map-container {
+    position: relative;
+    padding-bottom: 125%;
+  }
+
+  .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /*-------------- General contact mobile -------------------*/
+  .general-contact {
+    display: flex;
+    justify-content: center;
+    background-color: #2a423a;
+  }
+
+  .general-contact .wrapper {
+    justify-content: flex-start;
+    margin: 40px 0;
+  }
+
+  .general-contact h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125em;
+    font-weight: 500;
+  }
+
 
 
 
@@ -567,6 +630,53 @@ footer h3 {
     margin: 10px 0;
   }
 
+  /*-----------------------------------------------------
+                    About page 
+  -----------------------------------------------------*/
+
+  /*-------------- About - Mission tablet -------------------*/
+  .mission-text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mission-text p {
+    width: 47%;
+  }
+
+  .mission .wrapper {
+    margin: 80px 0;
+  }
+
+  .mission h2 {
+    font-size: 2.25em;
+    margin-bottom: 50px;
+  }
+
+  /*-------------- About - Map tablet -------------------*/
+  .map-container {
+    padding-bottom: 45.5%;
+  }
+
+  /*-------------- About - General contact tablet -------------------*/
+  .general-contact .wrapper {
+    margin: 70px 0;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .general-contact h2 {
+    font-size: 2.25em;
+  }
+
+  .general-contact h3 {
+    font-size: 1.5em;
+  }
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -641,7 +751,7 @@ footer h3 {
 
   /*-------------------- Footer desktop --------------------*/
 
-  .footer h3 {
+  footer h3 {
     font-size: 1.875em;
   }
 
@@ -652,6 +762,31 @@ footer h3 {
 
   footer .contact, footer .social {
     width: 22%;
+  }
+
+  /*-----------------------------------------------------
+                    About page 
+  -----------------------------------------------------*/
+
+  /*-------------- About - Mission desktop -------------------*/
+  .mission h2,
+  .general-contact h2 {
+    font-size: 3em;
+  }
+
+  .mission p,
+  .general-contact p {
+    font-size: 1.125em;
+  }
+
+  /*-------------- About - Map desktop -------------------*/
+  .map-container {
+    padding-bottom: 37.5%;
+  }
+
+  /*-------------- About - General contact desktop -------------------*/
+  .general-contact h3 {
+    font-size: 1.875em;
   }
 }
 
