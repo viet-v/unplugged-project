@@ -87,7 +87,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/**------------------ General -------------------**/   
+/**------------------ General mobile-------------------**/   
 html {
   font-size: 16px;
 }
@@ -116,14 +116,14 @@ header, main, footer {
   
 }
 
-/**------------------ Header -------------------**/ 
+/**------------------ Header mobile -------------------**/ 
 
-header img {
+header img {               /* logo */
   width: 70%;
   padding: 15px 0 10px 0;
 }
 
-header .divide-line {
+header .divide-line {      /* line between logo and navigation on mobile ver */
   width: 100%;
   height: 1px;
   background-color: #3a3a3a;
@@ -149,7 +149,7 @@ header nav ul li a {
   color: #e2e3ed;
 }
 
-/**------------------ Hero area -------------------**/ 
+/**------------------ Hero mobile -------------------**/ 
 
 h1 {
   font-family: 'Poppins', sans-serif;
@@ -159,17 +159,18 @@ h1 {
 
 .hero {
   width: 100%;
-  height: 500px;
-  background: url('../img/hero.jpg') center;
+  min-height: 500px;
+  background: url('../img/hero.jpg') center;     /* easy way to create responsive image is to set it as background */
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-/**------------------ Form -------------------**/
+/**------------------ Form mobile -------------------**/
 
 .form {
+  width: 100%;
   display: flex;
   justify-content: center;
   background: #527158;
@@ -187,7 +188,7 @@ h1 {
 }
 
 
-input[type=text] {
+input[type=text] {          /* email input box */
   width: 100%;
   color: #2a423a;
   font-style: italic;
@@ -195,7 +196,7 @@ input[type=text] {
   box-sizing: border-box; 
 }
 
-input[type=button] {
+input[type=button] {       /* summit button */
   width: 100%;
   padding: 20px 0;
   margin: 20px 0 50px 0;
@@ -210,7 +211,7 @@ input[type=button] {
 
 
 
-/**------------------ Features -------------------**/
+/**------------------ Features mobile -------------------**/
 
 .feature .wrapper {
   margin-bottom: 30px;
@@ -230,7 +231,7 @@ input[type=button] {
   font-weight: 500;
 }
 
-.feature-item {
+.feature-item {               /* includes 1 feature icon and 1 feature description */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,7 +253,7 @@ input[type=button] {
   text-align: center;
 }
 
-/**------------------ Review -------------------**/
+/**------------------ Review mobile -------------------**/
 
 .review {
   display: flex;
@@ -291,7 +292,7 @@ input[type=button] {
   padding: 0 0 45px 0;
 }
 
-/**------------------ Footer -------------------**/
+/**------------------ Footer mobile -------------------**/
 
 .contact, .social, .copyright {
   width: 100%;
@@ -309,6 +310,7 @@ input[type=button] {
 
 .contact a, .contact p {
   font-style: normal;
+  font-size: 0.875em;
   text-decoration: none;
   color: #e2e3ed;
 }
@@ -330,11 +332,11 @@ footer h3 {
 
 .social-icons i {
   background-color: #527158;
-  border-radius: 50%;
+  border-radius: 50%;             /* circle background for each social icon */
   width: 40px;
   height: 40px;
   text-align: center;
-  line-height: 40px;
+  line-height: 40px;              /* line height = width = height -> get icon down center circle background */
 }
 
 .copyright {
@@ -442,11 +444,11 @@ footer h3 {
     justify-content: space-between;         /* Logo and navigation are now on the same line */
   }
   
-  header img {
+  header img {                     /* Smaller logo */
     width: 35%;
   }
 
-  .divide-line {
+  .divide-line {                   /* Hide divide line between logo and navigation */
     display: none;
   }
 
@@ -463,6 +465,10 @@ footer h3 {
 
   h1 {
     font-size: 3em;
+  }
+
+  .hero {
+    min-height: 600px;
   }
 
   /*-------------------- Form tablet --------------------*/
@@ -487,14 +493,14 @@ footer h3 {
 
   /*-------------------- Features tablet --------------------*/
 
-  .feature-list {
+  .feature-list {                  /* Reduce width so the list will appear 2 columns */
     width: 82%;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
   }
 
-  .feature-item {
+  .feature-item {                 /* Creates 2-column feature list */
     width: 50%;
   }
 
@@ -561,6 +567,92 @@ footer h3 {
     margin: 10px 0;
   }
 
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .wrapper {
+    width: 80%;
+  }
+
+  /*-------------------- Header desktop --------------------*/
+
+  header nav {
+    width: 15%;
+  }
+
+  header nav ul li a {
+    font-size: 1.125em;
+  }
+
+  /*-------------------- Hero desktop --------------------*/
+
+  h1 {
+    font-size: 3.75em;
+    width: 70%;
+  }
+
+  .hero .wrapper {
+    justify-content: flex-start;
+  }
+
+  /*-------------------- Form desktop --------------------*/
+
+  .form h3 {
+    font-size: 1.875em;
+  }
+
+  .form p, input[type=text] {
+    font-size: 1.125em;
+  }
+
+  input[type=button] {
+    font-size: 1.5em;
+  }
+
+  /*-------------------- Features desktop --------------------*/
+
+  .feature-description {
+    font-size: 1.125em;
+  }
+
+  .feature-list {
+    width: 100%;
+  }
+
+  .feature-item {       /* Creates 3-column feature list */
+    width: 33%;
+  }
+
+  /*-------------------- Review desktop --------------------*/
+
+  .review h2 {
+    margin: 80px 0 70px 0;
+  }
+
+  .review h3 {
+    font-size: 1.875em;
+  }
+
+  .review-text p {
+    font-size: 1.125em;
+    line-height: 1.5em;
+  }
+
+  /*-------------------- Footer desktop --------------------*/
+
+  .footer h3 {
+    font-size: 1.875em;
+  }
+
+  .contact a, .contact p,
+  .copyright {
+    font-size: 1.125em;
+  }
+
+  footer .contact, footer .social {
+    width: 22%;
+  }
 }
 
 
