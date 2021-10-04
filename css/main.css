@@ -108,6 +108,7 @@ header, footer {
 
 .wrapper {
   width: 88%;
+  max-width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,7 +135,7 @@ header nav {
 }
 
 header nav ul {
-  list-style-type: none;
+  list-style-type: none;  /* erase the dot at each list item */
   margin: 0;
   padding: 0;
   display: flex;
@@ -307,7 +308,6 @@ input[type=button] {       /* summit button */
   margin: 0;
 }
 
-
 .contact a, .contact p {
   font-style: normal;
   font-size: 0.875em;
@@ -336,7 +336,7 @@ footer h3 {
   width: 40px;
   height: 40px;
   text-align: center;
-  line-height: 40px;              /* line height = width = height -> get icon down center circle background */
+  line-height: 40px;              /* line height = width = height -> get icon down center of circle background */
 }
 
 .copyright {
@@ -346,7 +346,7 @@ footer h3 {
 
 /*-----------------------------------------------------
                     About page 
-  -----------------------------------------------------*/
+  ---------------------------------------------------*/
 
   /*-------------- Mission mobile -------------------*/
   .mission {
@@ -375,7 +375,7 @@ footer h3 {
   /*-------------- Map mobile -------------------*/
   .map-container {
     position: relative;
-    padding-bottom: 125%;
+    padding-bottom: 125%;   /* keep map ratio=height/width */
   }
 
   .map iframe {
@@ -387,7 +387,7 @@ footer h3 {
   }
 
 
-  /*-------------- General contact mobile -------------------*/
+  /*-------------- General contact mobile -------------*/
   .general-contact {
     display: flex;
     justify-content: center;
@@ -405,6 +405,38 @@ footer h3 {
     font-weight: 500;
   }
 
+
+  /*-----------------------------------------------------
+                    FAQ page 
+  -----------------------------------------------------*/
+
+  /*-------------- FAQ content mobile -----------------*/
+  .faq {
+    display: flex;
+    justify-content: center;
+    background-color: #527158;
+  }
+
+  .faq h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.875em;
+    font-weight: 500;
+    line-height: 1.875;
+  }
+
+  .faq span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125em;
+    font-weight: 500;
+  }
+
+  .faq p {
+    font-size: 0.875em;
+  }
+
+  .faq-text {
+    margin-bottom: 30px;
+  }
 
 
 
@@ -496,22 +528,25 @@ footer h3 {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 768px) {
 
-  .wrapper {           /* Content wrapper changed a bit smaller on tablet */                 
+
+@media only screen and (min-width: 768px) {       /*=================== TABLET VERSION ===================*/
+
+  .wrapper {                       /* wrapper changed a bit smaller on tablet */                 
     width: 83%;
+    max-width: 640px;
   }
 
   /*-------------------- Header tablet--------------------*/
   header .wrapper {                
-    justify-content: space-between;         /* Logo and navigation are now on the same line */
+    justify-content: space-between;/* logo and navigation are now on the same line */
   }
   
-  header img {                     /* Smaller logo */
+  header img {                     /* smaller logo */
     width: 35%;
   }
 
-  .divide-line {                   /* Hide divide line between logo and navigation */
+  .divide-line {                   /* hide divide line between logo and navigation */
     display: none;
   }
 
@@ -556,14 +591,14 @@ footer h3 {
 
   /*-------------------- Features tablet --------------------*/
 
-  .feature-list {                  /* Reduce width so the list will appear 2 columns */
+  .feature-list {                  /* reduce width so the list will appear 2 columns */
     width: 82%;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
   }
 
-  .feature-item {                 /* Creates 2-column feature list */
+  .feature-item {                 /* creates 2-column feature list */
     width: 50%;
   }
 
@@ -634,7 +669,7 @@ footer h3 {
                     About page 
   -----------------------------------------------------*/
 
-  /*-------------- About - Mission tablet -------------------*/
+  /*-------------- About - Mission tablet -------------*/
   .mission-text {
     display: flex;
     justify-content: space-between;
@@ -653,12 +688,12 @@ footer h3 {
     margin-bottom: 50px;
   }
 
-  /*-------------- About - Map tablet -------------------*/
+  /*-------------- About - Map tablet -----------------*/
   .map-container {
-    padding-bottom: 45.5%;
+    padding-bottom: 45.5%;  /* map ratio changes on tablet */
   }
 
-  /*-------------- About - General contact tablet -------------------*/
+  /*-------------- About - General contact tablet -----*/
   .general-contact .wrapper {
     margin: 70px 0;
   }
@@ -677,15 +712,49 @@ footer h3 {
     font-size: 1.5em;
   }
 
+
+  /*-----------------------------------------------------
+                    FAQ page 
+  -----------------------------------------------------*/
+
+  /*-------------- FAQ content tablet -----------------*/
+  .faq .wrapper {
+    justify-content: left;
+    margin: 50px 0;
+  }
+  
+  .faq-text {
+    width: 45%;
+  }
+
+  .faq-content {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  .faq h2 {
+    font-size: 2.25em;
+  }
+
+  .faq span {
+    font-size: 0.875em;
+  }
+
+
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {      /*=================== DESKTOP VERSION ===================*/
 
   .wrapper {
     width: 80%;
+    max-width: 960px;
   }
 
   /*-------------------- Header desktop --------------------*/
+  header img {
+    width: 23%;
+  }
 
   header nav {
     width: 15%;
@@ -730,7 +799,7 @@ footer h3 {
     width: 100%;
   }
 
-  .feature-item {       /* Creates 3-column feature list */
+  .feature-item {       /* creates 3-column feature list */
     width: 33%;
   }
 
@@ -768,7 +837,7 @@ footer h3 {
                     About page 
   -----------------------------------------------------*/
 
-  /*-------------- About - Mission desktop -------------------*/
+  /*-------------- About - Mission desktop ------------*/
   .mission h2,
   .general-contact h2 {
     font-size: 3em;
@@ -779,15 +848,29 @@ footer h3 {
     font-size: 1.125em;
   }
 
-  /*-------------- About - Map desktop -------------------*/
+  /*-------------- About - Map desktop ---------------*/
   .map-container {
-    padding-bottom: 37.5%;
+    padding-bottom: 37.5%;  /* map ratio changes on desktop (height/width) */
   }
 
-  /*-------------- About - General contact desktop -------------------*/
+  /*-------------- About - General contact desktop ---*/
   .general-contact h3 {
     font-size: 1.875em;
   }
+
+  /*----------------------------------------------------
+                    FAQ page 
+  -----------------------------------------------------*/
+
+  /*-------------- FAQ content desktop ----------------*/
+  .faq h2 {
+    font-size: 3em;
+  }
+
+  .faq span, .faq p {
+    font-size: 1.125em;
+  }
+
 }
 
 
